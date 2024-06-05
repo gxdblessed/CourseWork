@@ -1,0 +1,6 @@
+﻿  CourseWork.cpp
+D:\Source\Visual Studio Projects\CourseWork\CourseWork\CourseWork.cpp(240,13): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Source\Visual Studio Projects\CourseWork\CourseWork\CourseWork.cpp(241,24): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\Source\Visual Studio Projects\CourseWork\CourseWork\CourseWork.cpp(341,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\Source\Visual Studio Projects\CourseWork\CourseWork\CourseWork.cpp(253,1): warning C4172: возвращение адреса локальной или временной переменной : arr
+  CourseWork.vcxproj -> D:\Source\Visual Studio Projects\CourseWork\x64\Debug\CourseWork.exe
