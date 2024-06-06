@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <fstream>
 using namespace std;
@@ -358,7 +358,7 @@ void main() {
 		case (1): {
 			cout << "Введите данные о студенте";
 			studentList.add(cinStudent(ID));
-			cout << "Студент добавлен" << endl;
+			cout << "Student is added" << endl;
 			break;
 		}
 		case (2): {
@@ -373,7 +373,7 @@ void main() {
 			if (studentList.count() == 0) break;
 			cout << "Номер студента, данные которого хотите изменить: ";
 			cin >> input;
-			cout << "Что хотите изменить?" << endl;
+			cout << "Что вы хотите изменить?" << endl;
 			submenu();
 			cout << "Выбор: ";
 			cin >> choice2;
@@ -386,10 +386,9 @@ void main() {
 				Student student = getStudentByID(studentList, input);
 				if (student.ID == 0) break;
 				removeStudent(studentList, input);
-				string input2 = "";
 				cout << "Введите новые данные: ";
-				cin >> input2;
-				student.name = input2;
+				cin.ignore();
+				getline(cin, student.name);
 				studentList.add(student);
 				break;
 			}
@@ -467,7 +466,8 @@ void main() {
 			case (1): {
 				cout << "Имя: ";
 				string input2 = "";
-				cin >> input2;
+				cin.ignore();
+				getline(cin, input2);
 				for (int i = 0; i < studentList.count(); i++) {
 					if (studentList.elementAt(i).name == input2) {
 						coutStudent(studentList.elementAt(i));
@@ -477,7 +477,7 @@ void main() {
 				break;
 			}
 			case (2): {
-				cout << "Дата рождения: ";
+				cout << "Год рождения: ";
 				cin >> input;
 				for (int i = 0; i < studentList.count(); i++) {
 					if (studentList.elementAt(i).birthYear == input) {
@@ -499,7 +499,7 @@ void main() {
 				break;
 			}
 			default: {
-				cout << "Неизвестная команда, попробуйте снова:" << endl;
+				cout << "Неизвестная команда, попробуйте снова" << endl;
 				break;
 			}
 			}
